@@ -1,16 +1,32 @@
 {
-  "name": "react-canvas-component",
-  "version": "1.0.0",
-  "description": "A simple component to wrap the JS canvas for use with React.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "canvas",
-    "react",
-    "webgl"
-  ],
+  "name": "simple-react-canvas-component",
+  "description": "A React Component to wrap the native JS canvas",
   "author": "Rico Trebeljahr",
-  "license": "ISC"
+  "keywords": [
+    "react",
+    "canvas"
+  ],
+  "version": "0.1.0",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && cp package.json README.md ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trebeljahr/react-canvas-component.git"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.8.4"
+  }
 }

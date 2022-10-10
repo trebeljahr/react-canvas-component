@@ -1,0 +1,1 @@
+A simple component to wrap the native canvas component and make it usable from React.
