@@ -6,33 +6,51 @@
     "react",
     "canvas"
   ],
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
-  "type": "module",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/simple-react-canvas-component.min.js",
+  "types": "dist/types/simple-react-canvas-component.d.ts",
   "files": [
-    "dist",
-    "README.md"
+    "README.md",
+    "LICENSE.md",
+    "dist/",
+    "src/",
+    "index.js"
   ],
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "npm run clean && tsc"
+    "build": "npm run build-types && npm run build-transpile && npm run build-bundle",
+    "build-types": "tsc",
+    "build-transpile": "babel src --out-dir dist --extensions \".ts\"",
+    "build-bundle": "webpack",
+    "prebuild": "npm run clean",
+    "watch": "webpack --watch",
+    "test": "tsc; npm run lint",
+    "clean": "git clean -xfd dist/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trebeljahr/react-canvas-component.git"
   },
   "devDependencies": {
-    "@types/react": "^17.0.0",
-    "@types/react-dom": "^17.0.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "typescript": "^4.8.4"
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/react": "^16.8.24",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "typescript": "^4.8.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   },
   "peerDependencies": {
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react": "^16.3.0 || ^17.0.1 || ^18.0.0"
   }
 }
