@@ -6,11 +6,11 @@
     "react",
     "canvas"
   ],
-  "version": "0.1.7",
+  "version": "0.1.8",
   "private": false,
-  "main": "dist/simple-react-canvas-component.min.js",
-  "types": "dist/types/simple-react-canvas-component.d.ts",
-  "typings": "dist/types/simple-react-canvas-component.d.ts",
+  "main": "dist/Canvas.min.js",
+  "types": "dist/types/Canvas.d.ts",
+  "typings": "dist/types/Canvas.d.ts",
   "files": [
     "README.md",
     "LICENSE.md",

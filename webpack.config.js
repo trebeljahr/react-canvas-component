@@ -12,7 +12,7 @@ const base = {
   mode: "development",
   devtool: "source-map",
   entry: {
-    "simple-react-canvas-component": ["./src/Canvas.tsx"],
+    Canvas: ["./src/Canvas.tsx"],
   },
   output: {
     path: path.join(__dirname, "dist"),
