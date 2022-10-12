@@ -29,7 +29,7 @@ const _Canvas = ({ setCnv, width, height }: _CanvasProps) => {
     context.setTransform(ratio, 0, 0, ratio, 0, 0);
   }, [width, height]);
 
-  return <canvas ref={canvasRef} width={width} height={height} />;
+  return <canvas tabIndex={1} ref={canvasRef} width={width} height={height} />;
 };
 
 type CanvasProps = {
