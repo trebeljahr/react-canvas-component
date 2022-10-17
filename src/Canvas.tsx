@@ -34,8 +34,8 @@ const _Canvas = ({ setCnv, width, height }: _CanvasProps) => {
 };
 
 type CanvasProps = {
-  width: number | null;
-  height: number | null;
+  width: number | undefined;
+  height: number | undefined;
   setCnv: React.Dispatch<React.SetStateAction<HTMLCanvasElement | null>>;
 };
 

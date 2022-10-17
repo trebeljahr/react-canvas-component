@@ -6,7 +6,7 @@
     "react",
     "canvas"
   ],
-  "version": "0.1.12",
+  "version": "0.1.13",
   "private": false,
   "main": "dist/Canvas.min.js",
   "types": "dist/types/Canvas.d.ts",
