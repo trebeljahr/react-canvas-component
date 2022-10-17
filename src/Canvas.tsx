@@ -16,18 +16,19 @@ const _Canvas = ({ setCnv, width, height }: _CanvasProps) => {
   }, []);
 
   React.useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ratio = Math.ceil(window.devicePixelRatio);
-    canvas.width = width * ratio;
-    canvas.height = height * ratio;
-    canvas.style.width = `${width}px`;
-    canvas.style.height = `${height}px`;
+    const cnv = canvasRef.current;
+    if (!cnv) return;
 
-    const context = canvas.getContext("2d");
-    if (!context) return;
-    context.setTransform(ratio, 0, 0, ratio, 0, 0);
-  }, [width, height]);
+    const ratio = Math.ceil(window.devicePixelRatio);
+    cnv.width = width * ratio;
+    cnv.height = height * ratio;
+    cnv.style.width = `${width}px`;
+    cnv.style.height = `${height}px`;
+
+    const ctx = cnv.getContext("2d");
+    if (!ctx) return;
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+  }, [width, height, canvasRef]);
 
   return <canvas tabIndex={0} ref={canvasRef} width={width} height={height} />;
 };
